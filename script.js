@@ -1,29 +1,30 @@
 function addToCart() {
-alert("Wonderfull Choice You have Made!!!!");
+    alert("Wonderfull Choice You have Made!!!!");
 
 }
 var quantityOFScarf = 0;
-var price =50;
+var price = 0;
 var total = 0;
-var cash=0 ;
-function cash(){
-if(total>=cash){
-alert('your balance is 0');
+var cash = 0;
+function cash() {
+    if (total >= cash) {
+        alert('your balance is 0');
+    }
+    document.querySelector('#cash').value = cash;
 }
-    document.querySelector('#cash').value =cash;
-}
-function add(){
-    document.querySelector('#addMin').value=quantityOFScarf;
+function add() {
     quantityOFScarf++;
-    document.querySelector('#total').innerHTML=total;
-    total=quantityOFScarf*price;
+
+    document.querySelector('#addMin').value = quantityOFScarf;
+    total = quantityOFScarf * price;
+    document.querySelector('#total').innerHTML = total;
 }
-function minus(){
-    if (quantityOFScarf>0){
+function minus() {
+    if (quantityOFScarf > 0) {
         quantityOFScarf--;
     }
-    document.querySelector('#addMin').value=quantityOFScarf;
+    document.querySelector('#addMin').value = quantityOFScarf;
+    total = quantityOFScarf * price;
 
-    document.querySelector('#total').innerHTML=total;
-    total=quantityOFScarf*price;
+    document.querySelector('#total').innerHTML = total;
 }
